@@ -1,0 +1,442 @@
+/* Variáveis de Cores (Identidade Visual) */
+:root {
+    --roxo-escuro: #2D0C8B;
+    /* Baseado na logo */
+    --laranja: #F37021;
+    /* Baseado na logo */
+    --branco: #FFFFFF;
+    --cinza-claro: #F5F5F5;
+    --cinza-escuro: #333333;
+    --texto: #4A4A4A;
+}
+
+/* Reset Básico e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--roxo-escuro);
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #d85f19;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--roxo-escuro);
+    border: 2px solid var(--roxo-escuro);
+}
+
+.btn-outline:hover {
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--roxo-escuro);
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo span {
+    font-size: 0.8rem;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--cinza-escuro);
+}
+
+nav a:hover {
+    color: var(--laranja);
+}
+
+/* 1. Página Inicial (Hero) */
+.hero {
+    background: var(--roxo-escuro);
+    color: var(--branco);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--branco);
+    font-size: 3rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.hero .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero .btn-outline {
+    color: var(--branco);
+    border-color: var(--branco);
+}
+
+.hero .btn-outline:hover {
+    background-color: var(--branco);
+    color: var(--roxo-escuro);
+}
+
+/* Seções Gerais */
+section {
+    padding: 80px 0;
+}
+
+.bg-cinza {
+    background-color: var(--cinza-claro);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--texto);
+}
+
+/* 2. O que você procura? */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card-procura {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 4px solid var(--laranja);
+}
+
+.card-procura h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.icone {
+    font-size: 3rem;
+}
+
+/* 3. Tutoriais */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card-tutorial {
+    background-color: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-tutorial img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-tutorial-content {
+    padding: 20px;
+}
+
+.card-tutorial-content h3 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.card-tutorial-content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* 4. Dicas do Campo */
+.dicas-campo {
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+}
+
+.dicas-campo h2 {
+    color: var(--branco);
+}
+
+.dicas-campo .section-subtitle {
+    color: #ddd;
+}
+
+.card-dica {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--laranja);
+}
+
+.card-dica h3 {
+    color: var(--laranja);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* 5. Curiosidades */
+.card-curiosidade {
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 12px;
+    border: 2px dashed var(--roxo-escuro);
+}
+
+.card-curiosidade h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 6. Sobre a Loja */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lista-destaques {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.lista-destaques li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-destaques li::before {
+    content: "✓";
+    color: var(--laranja);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* 7. Contato */
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.formulario {
+    background-color: var(--branco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--roxo-escuro);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.info-contato h3 {
+    margin-top: 20px;
+}
+
+.info-contato p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* 8. Rodapé */
+footer {
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 50px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    color: var(--branco);
+}
+
+.footer-logo span {
+    background-color: var(--laranja);
+}
+
+footer h4 {
+    color: var(--branco);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a:hover {
+    color: var(--);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+/* Conceito */
+.conceito-box {
+    background-color: #fff3ed;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 800px;
+    text-align: center;
+    border: 2px solid var(--laranja);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .sobre-grid,
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+}

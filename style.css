@@ -241,6 +241,15 @@ section {
 .card-tutorial-content .btn {
     margin-top: auto;
     align-self: flex-start;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .card-tutorial-content h3 {
